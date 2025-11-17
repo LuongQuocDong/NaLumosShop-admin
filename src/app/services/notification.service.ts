@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class NotificationService {
 
-  url = 'http://localhost:8080/api/notification';
+  url = 'https://nalumos-backend-production.up.railway.app/api/notification';
 
   constructor(private http: HttpClient) { }
 

@@ -6,7 +6,7 @@ import { Category } from '../common/Category';
   providedIn: 'root'
 })
 export class CategoryService {
-  url = "http://localhost:8080/api/categories";
+  url = "https://nalumos-backend-production.up.railway.app/api/categories";
   constructor(private httpClient: HttpClient) { }
   
   getAll() {

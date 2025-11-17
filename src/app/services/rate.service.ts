@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RateService {
-  url = "http://localhost:8080/api/rates";
+  url = "https://nalumos-backend-production.up.railway.app/api/rates";
 
   constructor(private httpClient: HttpClient) { }
 

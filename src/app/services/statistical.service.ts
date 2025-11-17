@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class StatisticalService {
 
-  url = 'http://localhost:8080/api/statistical';
+  url = 'https://nalumos-backend-production.up.railway.app/api/statistical';
 
   constructor(private httpClient: HttpClient) { }
 
