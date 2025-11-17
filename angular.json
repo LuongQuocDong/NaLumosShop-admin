@@ -6,7 +6,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "veggie-shop-admin": {
+        "NaLumosShop-admin": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:application": {
@@ -20,7 +20,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/veggie-shop-admin",
+                        "outputPath": "dist/NaLumosShop-admin",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -73,12 +73,15 @@
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                      "port": 4201
+                    },
                     "configurations": {
                         "production": {
-                            "browserTarget": "veggie-shop-admin:build:production"
+                            "browserTarget": "NaLumosShop-admin:build:production"
                         },
                         "development": {
-                            "browserTarget": "veggie-shop-admin:build:development"
+                            "browserTarget": "NaLumosShop-admin:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -86,7 +89,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "veggie-shop-admin:build"
+                        "browserTarget": "NaLumosShop-admin:build"
                     }
                 },
                 "test": {
@@ -109,5 +112,5 @@
             }
         }
     },
-    "defaultProject": "veggie-shop-admin"
+    "defaultProject": "NaLumosShop-admin"
 }

@@ -2,3 +2,73 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* ==================== SIDEBAR DARK MODE ==================== */
+ul.sidebar {
+  background: #121212 !important;
+  color: #ffffff !important;
+  border-right: 1px solid #222 !important;
+}
+
+ul.sidebar .sidebar-brand {
+  background: transparent !important;
+  color: #ffffff !important;
+  padding: 1rem 0.75rem !important;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+ul.sidebar .sidebar-brand-text {
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+ul.sidebar .sidebar-divider {
+  border-top: 1px solid rgba(255,255,255,0.06) !important;
+  margin: 0.5rem 1rem !important;
+}
+
+ul.sidebar .sidebar-heading {
+  color: rgba(255,255,255,0.65) !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.85rem;
+}
+
+ul.sidebar .nav-link {
+  color: rgba(255,255,255,0.9) !important;
+  padding: 0.75rem 1rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+ul.sidebar .nav-link .fas,
+ul.sidebar .nav-link .fa {
+  color: rgba(255,255,255,0.75) !important;
+}
+
+ul.sidebar .nav-link:hover {
+  background-color: #1f1f1f !important;
+  color: #fff !important;
+}
+
+ul.sidebar li.nav-item.active > .nav-link {
+  background-color: #252526 !important;
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+.bg-gradient-warning {
+  background: none !important;
+}
+
+.sidebar-dark .nav-item .nav-link {
+  color: #fff !important;
+}
+
+ul.sidebar {
+  min-height: 100vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+/* =========================================================== */
