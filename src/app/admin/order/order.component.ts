@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { environment } from '../../../environments/environment';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -74,7 +75,8 @@ export class OrderComponent implements OnInit {
   }
 
   openWebSocket() {
-    this.webSocket = new WebSocket(`${environment.apiUrl.replace('https', 'wss')}/notification`);
+    const wsUrl = environment.apiUrl.replace('https', 'wss');
+    this.webSocket = new WebSocket(`${wsUrl}/notification`);
 
     this.webSocket.onopen = (event) => {
       // console.log('Open: ', event);

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ChatMessage } from 'src/app/common/ChatMessage';
@@ -86,7 +87,8 @@ export class HeaderComponent implements OnInit {
   }
 
   openWebSocket() {
-    this.webSocket = new WebSocket(`${environment.apiUrl.replace('https', 'wss')}/notification`);
+    const wsUrl = environment.apiUrl.replace('https', 'wss');
+    this.webSocket = new WebSocket(`${wsUrl}/notification`);
 
     this.webSocket.onopen = (event) => {
       // console.log('Open: ', event);
