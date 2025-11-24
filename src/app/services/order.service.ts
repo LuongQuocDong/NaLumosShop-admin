@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderService {
-  url = "https://nalumos-backend-production.up.railway.app/api/orders";
+  private baseUrl = environment.apiUrl;
+  url = `${this.baseUrl}/api/orders`;
 
-  urlOrderDetail = "https://nalumos-backend-production.up.railway.app/api/orderDetail";
+  urlOrderDetail = `${this.baseUrl}/api/orderDetail`;
 
   constructor(private httpClient: HttpClient) { }
 

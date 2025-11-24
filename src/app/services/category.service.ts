@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 import { Category } from '../common/Category';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  url = "https://nalumos-backend-production.up.railway.app/api/categories";
+  private baseUrl = environment.apiUrl;
+  url = `${this.baseUrl}/api/categories`;
   constructor(private httpClient: HttpClient) { }
   
   getAll() {

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 import { Product } from '../common/Product';
 
 @Injectable({
@@ -7,7 +8,8 @@ import { Product } from '../common/Product';
 })
 export class ProductService {
 
-  url = "https://nalumos-backend-production.up.railway.app/api/products";
+  private baseUrl = environment.apiUrl;
+  url = `${this.baseUrl}/api/products`;
 
   constructor(private httpClient: HttpClient) { }
 

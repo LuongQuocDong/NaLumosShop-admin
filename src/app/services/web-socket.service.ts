@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 import { ToastrService } from 'ngx-toastr';
 import { ChatMessage } from '../common/ChatMessage';
 
@@ -13,7 +14,7 @@ export class WebSocketService {
   constructor(private toastr: ToastrService) { }
 
   public openWebSocket() {
-    this.webSocket = new WebSocket('wss://nalumos-backend-production.up.railway.app/notification');
+    this.webSocket = new WebSocket(`${environment.apiUrl.replace('https', 'wss')}/notification`);
 
     this.webSocket.onopen = (event) => {
       // console.log('Open: ', event);

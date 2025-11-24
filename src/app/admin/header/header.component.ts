@@ -86,7 +86,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openWebSocket() {
-    this.webSocket = new WebSocket('wss://nalumos-backend-production.up.railway.app/notification');
+    this.webSocket = new WebSocket(`${environment.apiUrl.replace('https', 'wss')}/notification`);
 
     this.webSocket.onopen = (event) => {
       // console.log('Open: ', event);

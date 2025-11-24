@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { Login } from '../common/Login';
 import { SessionService } from './session.service';
@@ -9,7 +10,8 @@ import { SessionService } from './session.service';
 })
 export class AuthService {
 
-  url = 'https://nalumos-backend-production.up.railway.app/api/auth/';
+  private baseUrl = environment.apiUrl;
+  url = `${this.baseUrl}/api/auth/`;
 
   constructor(private sessionService: SessionService, private http: HttpClient) { }
 

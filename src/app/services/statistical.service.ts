@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StatisticalService {
 
-  url = 'https://nalumos-backend-production.up.railway.app/api/statistical';
+  private baseUrl = environment.apiUrl;
+  url = `${this.baseUrl}/api/statistical`;
 
   constructor(private httpClient: HttpClient) { }
 

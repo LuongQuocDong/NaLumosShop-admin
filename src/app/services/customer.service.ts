@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 import { Customer } from '../common/Customer';
 
 @Injectable({
@@ -7,7 +8,8 @@ import { Customer } from '../common/Customer';
 })
 export class CustomerService {
 
-  url = "https://nalumos-backend-production.up.railway.app/api/auth";
+  private baseUrl = environment.apiUrl;
+  url = `${this.baseUrl}/api/auth`;
 
   constructor(private httpClient: HttpClient) { }
 
